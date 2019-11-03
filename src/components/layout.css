@@ -22,6 +22,10 @@ section,
 summary {
   display: block;
 }
+footer {
+  position: fixed;
+  bottom: 0;
+}
 audio,
 canvas,
 progress,
