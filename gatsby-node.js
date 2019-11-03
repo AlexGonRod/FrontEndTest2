@@ -1,4 +1,4 @@
-const axios = require('axios');
+const axios = require('axios')
 const crypto = require('crypto')
 
 exports.sourceNodes = async ({ actions }) => {
@@ -7,18 +7,22 @@ exports.sourceNodes = async ({ actions }) => {
 
     const result = await fetch();
 
-    result.data.Brastlewark.map((char, i) => {
+    result.data.Brastlewark.map( char => {
             const Char = {
-                id: `${i}`,
-                parent: `__SOURCE__`,
                 internal: {
                     type: `RandomChar`,
                 },
+                parent: `__SOURCE__`,
+                id: `${char.id}`,
                 children: [],
                 name: char.name,
                 image: char.thumbnail,
-                width: char.width,
-                height: char.height
+                weight: char.weight,
+                height: char.height,
+                age: char.age,
+                hair: char.hair_color,
+                professions: char.professions,
+                friends: char.friends
             }
 
             const contentDigest = crypto

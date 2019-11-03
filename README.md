@@ -24,3 +24,9 @@ Be creative!
 * We expect to have a minimum documentation on a README file. We need to know what have you done and how to run your app. Also, if you have taken any decision or could not meet any of requirements, please explain it to us! 
 * Use github or any source control tool. lt would be great if we can see incremental steps.
 * Determine gender of gnomes (just joking on this one but feel free to make your guess) 
+
+
+## Installation and ussage
+Clone and install this app with: 
+ * git clone https://github.com/AlexGonRod/FrontEndTest2 && cd FrontEndTest2 && npm i
+ * If you need to install gatsby then tun npx gatsby && gatsby develop

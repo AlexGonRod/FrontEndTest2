@@ -1,27 +1,38 @@
-import React from 'react';
+import React from 'react'
+import Body from './body'
 import('./styles.scss')
 
 const Character = (props) => {
-    const { users } = this.props.data
+    const { users } = props
 
     return (
         <>
-            {users.map((user) => {
-                const userData = user.node;
-                var style = {
-                    backgroundImage: 'url(' + userData.image + ')',
-                };
-                return (
-                     <div key={userData.id}>
-                        <header style={style} className="card-header">
-                            <h4 className="card-header--title">{userData.name}</h4>
-                        </header>
-                        <div className="card-body">
-                            <p className="date">March 20 2015</p>
+            {users.map(user => {
+                const {
+                    name,
+                    age,
+                    height,
+                    weight,
+                    hair,
+                    image
+                } = user.node;
+                const style = { backgroundImage: 'url(' + image + ')' };
 
-                                {/* <h2>{userData.name}</h2> */}
+                return (
+                    <>
+                        <div key={name} className="card">
+                            <header style={style} className="card-header">
+                                <h4 className="card-header--title">{name}</h4>
+                            </header>
+                            <Body
+                                name={name}
+                                age={age}
+                                height={height}
+                                weight={weight}
+                                hair={hair}
+                            />
                         </div>
-                    </div>
+                    </>
                 )
             })}
         </>
