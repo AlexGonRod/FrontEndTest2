@@ -30,17 +30,18 @@ const List = (props) => {
     return (
         <VirtualList
         width='100%'
-        height={window.innerHeight - 124}
-        itemCount={1000}
-        itemSize={200}
-        style={{ border: '1px solid' }}
+        height={window.innerHeight - 10}
+        itemCount={users.length}
+        itemSize={500}
+        scrollToIndex={0}
+        overscanCount={5}
         renderItem={({ index, style }) => (
             <Character 
-                key={index} 
+                index={users[index].node.id}
                 style={style}
-                users={users}
+                user={users[index].node} 
             />
-        )} />
+          )} />
     )
 }
 
