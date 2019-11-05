@@ -1,5 +1,6 @@
 /* Design inspiration:  https://dribbble.com/shots/1978243-Latest-News */
 
+$textColor: #fff;
 
 .card-header {
   height: 150px;
@@ -7,7 +8,7 @@
   padding: 15px;
   width:100%;
   background-size:cover;
-  color:#fff;
+  color:$textColor;
 }
 
 .card-header--title {
@@ -17,7 +18,7 @@
 
 .card-body {
   padding: 15px;
-  background-color:#fff;
+  background-color:$textColor;
   width:100%;
 }
 
@@ -31,12 +32,25 @@
     flex-grow: 1;
     flex-direction: column;
     font-size: 13px;
+    margin: 0 10px;
+    text-align: center;
     .body-content_top {
-      align-content: center;
+      align-content: flex-start;
       padding-bottom: 5px;
       margin-bottom: 5px;
       border-bottom: 1px solid grey;
     }
   }
 }
+
+.checkWrapper {
+  .checkButn {
+    display: block;
+    width: 100%;
+    :hover {
+      cursor: pointer;
+    }
+  }
+}
+
 

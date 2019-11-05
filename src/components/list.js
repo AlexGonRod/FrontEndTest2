@@ -34,13 +34,13 @@ const List = (props) => {
         itemCount={users.length}
         itemSize={500}
         scrollToIndex={0}
-        overscanCount={5}
+        overscanCount={10}
         renderItem={({ index, style }) => (
             <Character 
                 index={users[index].node.id}
                 style={style}
                 user={users[index].node} 
-            />
+            /> 
           )} />
     )
 }
