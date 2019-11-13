@@ -1,12 +1,17 @@
 import React from 'react'
 import BodyContent from './body_content'
 import BodyFooter from './bodyFooter'
-import Collapse from './collapse'
+// import Collapse from './collapse'
 
 import('./styles.scss')
 
 const Character = (props) => {
+    const [check, setCheck] = useState(false)
     const { user } = props
+
+    addCollapse = () => {
+       return check ? 'collapsed' : 'uncollapse' 
+    }
 
     const style = { backgroundImage: 'url(' + user.image + ')' };
     return (
@@ -20,8 +25,11 @@ const Character = (props) => {
                     height={user.height}
                     hair={user.hair}
                 />
-                <Collapse />
-                <BodyFooter 
+                <div className="checkWrapper">
+                    <button className="checkBtn" onClick={() => setCheck(!check)}>V</button>
+                </div>
+                <BodyFooter
+                    className={this.addCollapse()}
                     professions={user.professions}
                     friends={user.friends}
                 />
