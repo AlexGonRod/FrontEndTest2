@@ -1,0 +1,42 @@
+@mixin title($margin, $padding, $color, $fontSize, $lineHeight) {
+  margin: $margin;
+  padding: $padding;
+  color: $color;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+}
+
+html {
+  font-family: sans-serif;
+  word-wrap: break-word;
+  font-kerning: normal;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  color: hsla(0, 0%, 0%, 0.8);
+  font-family: georgia, serif;
+  font-weight: normal;
+}
+img {
+  max-width: 100%;
+  margin-bottom: 1.45rem;
+}
+h4 {
+  @include title(null, null, white, null, null);
+}
+
+h2, h3, h5, h6 {
+  @include title(0 0 1.45rem 0, 0, #000, 1rem, 1.1);
+}
+
+.description {
+  line-height: 1.5rem;
+  margin-bottom: 1.45rem;
+  word-spacing: 100vw;
+}
+
+

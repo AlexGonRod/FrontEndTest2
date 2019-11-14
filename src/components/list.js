@@ -29,19 +29,20 @@ const List = (props) => {
 
     return (
         <VirtualList
-        width='100%'
-        height={window.innerHeight - 10}
-        itemCount={users.length}
-        itemSize={500}
-        scrollToIndex={0}
-        overscanCount={10}
-        renderItem={({ index, style }) => (
-            <Character 
-                index={users[index].node.id}
-                style={style}
-                user={users[index].node} 
-            /> 
-          )} />
+            width='100%'
+            height={window.innerHeight - 10}
+            itemCount={users.length}
+            itemSize={500}
+            scrollToIndex={0}
+            overscanCount={50}
+            className="VirtualList"
+            renderItem={({ index }) => (
+                <Character
+                    index={users[index]}
+                    user={users[index].node}
+                />
+            )}
+        />
     )
 }
 

@@ -1,13 +1,14 @@
+const { createRemoteFileNode } = require(`gatsby-source-filesystem`)
 const axios = require('axios')
 const crypto = require('crypto')
 
-exports.sourceNodes = async ({ actions }) => {
-    const { createNode } = actions
+exports.sourceNodes = async ({ actions, store, cache, createNodeId }) => {
+    const { createNode, createNodeField } = actions
     const fetch = () => axios.get('https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json')
 
     const result = await fetch();
 
-    result.data.Brastlewark.map( char => {
+    result.data.Brastlewark.map( async char => {
             const Char = {
                 internal: {
                     type: `RandomChar`,
