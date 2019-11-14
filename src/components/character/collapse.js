@@ -1,12 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const Collapse = () => {
-    const [check, setCheck] = useState(false)
 
     return (
-        <div className="checkWrapper">
-            <button className="checkBtn" onClick={() => setCheck(!check)}>V</button>
-        </div>
+        <button className="checkBtn">V</button>
     )
 }
 

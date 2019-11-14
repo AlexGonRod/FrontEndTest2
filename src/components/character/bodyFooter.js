@@ -7,12 +7,12 @@ const BodyFooter = (props) => {
     } = props
 
     return (
-        <div className="body_footer">
-            <div footer-wrapper>
+        <div className="body-footer">
+            <div className="footer-wrapper">
                 <h3 className="title">Professions</h3>
                 <p className="description">{professions}</p>
             </div>
-            <div footer-wrapper>
+            <div className="footer-wrapper">
                 <h3 className="title">Friends</h3>
                 <p className="description">{friends}</p>
             </div>
