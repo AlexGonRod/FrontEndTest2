@@ -1,9 +1,8 @@
-const { createRemoteFileNode } = require(`gatsby-source-filesystem`)
 const axios = require('axios')
 const crypto = require('crypto')
 
-exports.sourceNodes = async ({ actions, store, cache, createNodeId }) => {
-    const { createNode, createNodeField } = actions
+exports.sourceNodes = async ({ actions }) => {
+    const { createNode } = actions
     const fetch = () => axios.get('https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json')
 
     const result = await fetch();
