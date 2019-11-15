@@ -10,11 +10,11 @@ const BodyFooter = (props) => {
         <div className="body-footer">
             <div className="footer-wrapper">
                 <h3 className="title">Professions</h3>
-                <p className="description">{professions}</p>
+                <p className="description">{professions.join(', ')}</p>
             </div>
             <div className="footer-wrapper">
                 <h3 className="title">Friends</h3>
-                <p className="description">{friends}</p>
+                <p className="description">{friends.join(', ')}</p>
             </div>
         </div>
     )
