@@ -16,9 +16,9 @@ Be creative!
 
 * UI must not blocked by network connections or long operations.
 * Images coming from network should cached to improve performance.
-* Snappiness € responsiveness over sluggishness €. idleness.
+* Snappiness and responsiveness over sluggishness and idleness.
 * Use the framework you feel more comfortable using.
-* Make visible the use of HTML 8 CSS.
+* Make visible the use of HTML & CSS.
 * ES6 is highly recommended.
 * Add minimum tests to the app.
 * We expect to have a minimum documentation on a README file. We need to know what have you done and how to run your app. Also, if you have taken any decision or could not meet any of requirements, please explain it to us!
@@ -31,3 +31,9 @@ Clone and install this app with:
  * git clone https://github.com/AlexGonRod/FrontEndTest2 && cd FrontEndTest2 && npm i
  * If you need to install gatsby then tun npx gatsby && gatsby develop
  * Then open a new browser tab to http://localhost:8000/
+
+ This test is done in gatsby. This is my first time using this framework after some tutorials but it's nice to use new thing under react.
+ Fetching data is done using graphql that is something that I was waiting to use some time ago.
+
+ All the components are done using Hooks and rendered using a node package called react-tiny-virtual-list wich allow us to see only some elements and not all of them.
+ https://github.com/clauderic/react-tiny-virtual-list
